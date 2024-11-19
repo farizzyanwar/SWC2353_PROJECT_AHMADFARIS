@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Olympus Strength Gym | Pricing</title>
+  <link rel="icon" href="images/favicon.png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="nav__header section__container">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="logo" width="150" height="154">
+          OLYMPUS STRENGTH GYM
+        </a>
+      </div>
+      <nav class="nav__menu">
+        <ul class="nav__links">
+          <li class="link"><a href="index.html">Home</a></li>
+          <li class="link"><a href="about.html">About</a></li>
+          <li class="link"><a href="classes.html">Classes</a></li>
+          <li class="link"><a href="trainers.html">Trainers</a></li>
+          <li class="link"><a href="pricing.html">Pricing</a></li>
+          <li class="link"><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Pricing Section -->
+  <section class="section__container pricing__container">
+    <h1 class="section__header">Our Membership Plans</h1>
+    <p>Choose the plan that suits you best and join us on your fitness journey!</p>
+
+    <div class="carousel">
+      <button class="prev-btn">‹</button>
+      <div class="carousel-track">
+        <div class="price__card">
+          <img src="assets/athena.png" alt="Basic Plan Logo" width="245" class="plan__logo">
+          <h2>ATHENA&nbsp;</h2>
+          <p class="price">RM49 / Month</p>
+          <ul class="price__features">
+            <li>Access to all gym equipment</li>
+            <li>1 free personal training session</li>
+            <li>Free fitness assessment</li>
+          </ul>
+        </div>
+        <div class="price__card">
+          <img src="assets/hades.png" alt="Pro Plan Logo" width="245" class="plan__logo">
+          <h2>HADES&nbsp;</h2>
+          <p class="price">RM79 / Month</p>
+          <ul class="price__features">
+            <li>All Basic features</li>
+            <li>5 personal training sessions</li>
+            <li>Access to group classes</li>
+          </ul>
+        </div>
+        <div class="price__card">
+          <img src="assets/zeus.png" alt="Elite Plan Logo" width="232" class="plan__logo">
+          <h2>ZEUS&nbsp;</h2>
+          <p class="price">RM109 / year</p>
+          <ul class="price__features">
+            <li>All Pro features</li>
+            <li>Unlimited personal training</li>
+            <li>VIP locker room access</li>
+          </ul>
+        </div>
+      </div>
+      <button class="next-btn">›</button>
+    </div>
+
+    <div class="signup-link" style="text-align: center;">
+      <p>&nbsp;</p>
+      <p><a href="signup.html" class="signup-btn">Sign Up Now</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <h4 class="footer__logo">
+          <a href="index.html">
+            <img src="assets/logo.png" alt="logo" width="92" height="90">
+            OLYMPUS STRENGTH GYM
+          </a>
+        </h4>
+        <p>Take the first step towards a healthier, stronger you with our unbeatable pricing plans.</p>
+        <div class="footer__socials">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-instagram-line"></i></a>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <p>&copy; 2024 Olympus Strength Gym. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Carousel -->
+  <script>
+    const prevButton = document.querySelector('.prev-btn');
+    const nextButton = document.querySelector('.next-btn');
+    const track = document.querySelector('.carousel-track');
+    const cards = document.querySelectorAll('.price__card');
+    const cardWidth = cards[0].offsetWidth;
+
+    let currentSlide = 0;
+
+    // Update the carousel track position
+    function updateCarousel() {
+      track.style.transform = `translateX(-${cardWidth * currentSlide}px)`;
+    }
+
+    // Next button functionality
+    nextButton.addEventListener('click', () => {
+      if (currentSlide < cards.length - 1) {
+        currentSlide++;
+      } else {
+        currentSlide = 0; // Loop back to the first card
+      }
+      updateCarousel();
+    });
+
+    // Previous button functionality
+    prevButton.addEventListener('click', () => {
+      if (currentSlide > 0) {
+        currentSlide--;
+      } else {
+        currentSlide = cards.length - 1; // Loop to the last card
+      }
+      updateCarousel();
+    });
+  </script>
+
+</body>
+</html>

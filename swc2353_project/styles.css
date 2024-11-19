@@ -1,0 +1,520 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-image: url('assets/A_gym_aesthetic_background_featuring_a_modern,_dim.png'); /* Adjust path if necessary */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Button Styles */
+.btn {
+  background-color: #aaaddc; /* Button background color */
+  color: #bcbcff; /* Text color set to white */
+  padding: 0.75rem 1.5rem; /* Padding for button */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1rem; /* Font size */
+  transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.btn:hover {
+  background-color: #150c2e; /* Darker shade on hover */
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: #7276b3;
+}
+
+/* Container */
+.section__container {
+  max-width: 1600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+  color: #ffffff; /* White text for better readability */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Header */
+.header {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem 2rem;
+  width: 100%;
+  color: #000000;
+}
+
+.nav__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo a {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav__menu__btn {
+  display: none;
+  font-size: 2rem;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__links li a {
+  text-decoration: none;
+  color: #767BE3;
+  font-weight: bold;
+}
+
+.nav__links li a:hover {
+  color: #fff;
+}
+
+.cancel-btn {
+  background-color: #5f4683; /* Unique red background color */
+  color: #fff; /* White text color */
+  padding: 0.75rem 1.5rem; /* Same padding as .btn */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1rem; /* Same font size as .btn */
+  transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.cancel-btn:hover {
+  background-color: #7f7f8f; /* Darker red on hover */
+}
+
+/* Prevent table row hover effect */
+.user-table tr:hover {
+  background-color: transparent; /* Reset background color on row hover */
+}
+
+.locations-list {
+  display: flex;
+  justify-content: space-between; /* Distribute space evenly */
+  flex-wrap: wrap; /* Allow wrapping to the next line if necessary */
+}
+
+.location-item:hover {
+  transform: scale(1.05); /* Increase size by 5% on hover */
+  background-color: rgba(0, 0, 0, 0.345); /* Make the background semi-transparent */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Add smooth transition */
+}
+
+.location-item:hover h3, .location-item:hover p {
+  color: #fbfbfbbe; /* Change text color to dark gray */
+}
+
+.location-item {
+  flex: 1; /* Each location will take equal space */
+  margin: 1rem; /* Add some margin between items */
+  background-color: rgba(255, 255, 255, 0.191); /* Optional: Add a background for better visibility */
+  padding: 1rem; /* Padding inside each location item */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(182, 182, 182, 0); /* Optional: Add shadow for depth */
+}
+
+.location-icon {
+  margin-right: 0.5rem; /* Space between the icon and the text */
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 90%; 
+  max-width: 300px;
+  margin: auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.user-table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Merge borders */
+  margin-top: 20px; /* Space above the table */
+}
+
+.user-table th, .user-table td {
+  border: 1px solid #ddd; /* Light gray border */
+  padding: 12px; /* Padding for cells */
+  text-align: left; /* Align text to the left */
+}
+
+.user-table th {
+  background-color: #767BE3; /* Header background color */
+  color: white; /* Header text color */
+  font-weight: bold; /* Bold text */
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Zebra striping for even rows */
+}
+
+.user-table tr:hover {
+  background-color: #ddd; /* Highlight row on hover */
+}
+
+.user-table button {
+  padding: 5px 10px; /* Padding for the button */
+  font-size: 0.9rem; /* Button font size */
+}
+
+.price__card {
+  min-width: 100%;
+  max-width: 320px;
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.prev-btn, .next-btn {
+  background-color: #767BE3;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; /* Ensure buttons appear on top */
+  width: 3rem; /* Increase size for better visibility */
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-btn {
+  left: -2rem;
+}
+
+.next-btn {
+  right: -2rem;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: #6E56B3;
+}
+
+/* Sign-Up Button Styling */
+.signup-link .signup-btn {
+  background-color: #ff6347; /* Bright color to stand out */
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.signup-link .signup-btn:hover {
+  background-color: #e55342; /* Darker shade on hover */
+  transform: scale(1.1); /* Pop-out effect */
+}
+
+.signup-link .signup-btn:active {
+  transform: scale(1); /* Reset on click */
+}
+
+/* Header Image and Content */
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.header__image img {
+  width: 400px;
+}
+
+.header__content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.header__content p {
+  margin-bottom: 1.5rem;
+}
+
+.header__btn .btn {
+  background-color: #767BE3;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.header__btn .btn:hover {
+  background-color: #6E56B3;
+}
+
+/* About Section */
+.about__container {
+  display: flex;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+.about__image img {
+  max-width: 100%;
+}
+
+.about__content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about__card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.about__card span i {
+  font-size: 2rem;
+  color: #767BE3;
+}
+
+.signup-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Sign-Up Form */
+.signup__form {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup__form h1 {
+  font-size: 2.5rem;
+  color: #767BE3;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.signup__form p {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form__group {
+  margin-bottom: 1.5rem;
+}
+
+.form__group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.price__card .btn {
+  background-color: #767BE3;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.form__group input,
+.form__group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form__group input:focus,
+.form__group select:focus {
+  border-color: #ff6347;
+  outline: none;
+}
+
+.form__group .btn {
+  background-color: #ff6347;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.form__group .btn:hover {
+  background-color: #e55342;
+}
+
+/* Footer */
+.footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 2rem;
+  width: 100%;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__col {
+  width: 25%;
+}
+
+.footer__logo a {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.footer__links a {
+  display: block;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.footer__links a:hover {
+  color: #203D64;
+}
+
+.footer__bar {
+  text-align: center;
+  padding: 1rem;
+  background-color: #222;
+  margin-top: 2rem;
+}
+
+/* Swiper Navigation Buttons for Pricing Slideshow */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background for better visibility */
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.swiper-button-next {
+  right: 15px; /* Adjust spacing from the right */
+}
+
+.swiper-button-prev {
+  left: 15px; /* Adjust spacing from the left */
+}
+
+/* Hover Effect for Buttons */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+}
+
+/* Centering the Swiper Pagination Dots */
+.swiper-pagination {
+  bottom: 10px; /* Adjusts spacing from the bottom */
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Pagination Dot Style */
+.swiper-pagination-bullet {
+  background-color: #767BE3;
+  opacity: 1;
+  transition: transform 0.2s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ff6347;
+  transform: scale(1.2); /* Slightly enlarges the active dot */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1202px) {
+  .nav__links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav__menu__btn {
+    display: block;
+  }
+
+  .about__container, .header__container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about__container, .footer__col {
+    width: 100%;
+  }
+}

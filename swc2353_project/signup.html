@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Olympus Strength Gym</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="nav__header section__container">
+            <div class="nav__logo">
+                <a href="index.html">Olympus Strength Gym</a>
+            </div>
+            <nav class="nav__menu">
+                <ul class="nav__links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="trainers.html">Trainers</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sign-Up Section -->
+    <section class="section__container signup__form">
+        <h1>Sign Up Now</h1>
+        <p>Join Olympus Strength Gym and start your fitness journey today!</p>
+
+        <!-- Congratulatory Message -->
+        <div id="congratsMessage" style="display: none; margin-top: 1rem; padding: 1rem; background-color: #dff0d8; border: 1px solid #d6e9c6; color: #3c763d; border-radius: 8px;">
+            <strong>Congratulations!</strong> You have successfully signed up for Olympus Strength Gym!
+        </div>
+
+        <!-- Updated Form with POST method to submit data to PHP -->
+        <form action="register.php" method="POST">
+            <div class="form__group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form__group">
+                <label for="email"><strong>Email Address:</strong></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form__group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form__group">
+                <label for="plan">Select Plan</label>
+                <select id="plan" name="plan" required>
+                    <option value="Zeus">Zeus Plan</option>
+                    <option value="Athena">Athena Plan</option>
+                    <option value="Hades">Hades Plan</option>
+                </select>
+            </div>
+
+            <div class="form__group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form__group">
+                <button type="submit" class="btn">Sign Up Now</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container section__container">
+            <div class="footer__col">
+                <h4 class="footer__logo">
+                    <a href="index.html">Olympus Strength Gym</a>
+                </h4>
+                <p>Unleash your inner strength at Olympus.</p>
+            </div>
+            <div class="footer__col">
+                <h4>Quick Links</h4>
+                <div class="footer__links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="classes.html ">Classes</a>
+                    <a href="trainers.html">Trainers</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>Contact Us</h4>
+                <p>Email: info@olympusgym.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Location: 1234 Fitness Blvd, Gym City</p>
+            </div>
+        </div>
+        <div class="footer__bar">
+            <p>&copy; 2024 Olympus Strength Gym. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
